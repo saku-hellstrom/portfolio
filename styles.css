@@ -82,6 +82,7 @@ p {
 
 
 body {
+  background-color: var(--colorprimary);
   background-image: url(./Assets/Images/Desktop\ -\ 1.png);
   background-size: cover;
   background-repeat: no-repeat;
