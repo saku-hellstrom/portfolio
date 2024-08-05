@@ -1,0 +1,86 @@
+@media (max-width: 800px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg)
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg)
+    }
+
+    .nav-menu {
+        padding-top: 40px;
+        background-color: transparent;
+        position: fixed;
+        right: -100%;
+        top: 80px;
+        align-items: flex-end;
+        flex-direction: column;
+        height: 100%;
+        transition: var(--transition);
+        margin: 0;
+    }
+
+    .nav-item a {
+        padding: 0px 5vw;
+    }
+
+    .nav-menu.active {
+        right: 0;
+        transition: var(--transition);
+    }
+
+    .hero {
+        flex-direction: column;
+        padding-bottom: 40px;
+    }
+
+    .hero img {
+        max-width: 500px;
+    }
+
+    .projects {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-text,
+    .project-text2 {
+        text-align: center;
+    }
+
+    .project-image,
+    .project-image2 {
+        margin-bottom: 20px;
+    }
+
+    .footer-nav li a {
+        font-size: 1.5rem;
+    }
+
+    .footer p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .contact-container div a {
+        font-size: 1rem;
+    }
+
+    .footer-nav li a {
+        font-size: 0.9rem;
+    }
+
+    .footer p {
+        font-size: 0.75rem;
+    }
+
+}

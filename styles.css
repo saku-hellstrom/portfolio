@@ -1,0 +1,373 @@
+/* Fonts */
+
+@font-face {
+  font-family: "Sansation";
+  src: url(./Assets/Fonts/sansation/Sansation_Regular.ttf);
+}
+
+@font-face {
+  font-family: "Sansation Light";
+  src: url(./Assets/Fonts/sansation/Sansation_Light.ttf);
+}
+
+
+@font-face {
+  font-family: "Russo One";
+  src: url(./Assets/Fonts/Russo_One/RussoOne-Regular.ttf);
+}
+
+/* Variables */
+:root {
+  --colorprimary: #3A1078;
+  --colorp2: #4E31AA;
+  --coloraccent: #59C0EB;
+  --colorlinks: #2F58CD;
+  --colorwhite: #FFFFFF;
+  --coloroffwhite: #D9D9D9;
+  --ff1: "Russo One", sans-serif;
+  --ff2: "Sansation", sans-serif;
+  --ff3: "Sansation Light", sans-serif;
+  --h1: bold 54px/70px var(--ff1);
+  --h2: bold 48px/36px var(--ff1);
+  --h3: bold 36px/30px var(--ff2);
+  --h4: bold 22px/30px var(--ff2);
+  --links: 18px/18px var(--ff2);
+  --p1: 24px/24px var(--ff2);
+  --p2: 18px/24px var(--ff2);
+  --p3: 20px/24px var(--ff1);
+  --transition: 0.3s ease-in-out;
+}
+
+/* Basic Setup */
+
+* {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+h1 {
+  font: var(--h1);
+  letter-spacing: 0.45rem;
+}
+
+h2 {
+  font: var(--h2);
+  letter-spacing: .3rem;
+}
+
+h3 {
+  font: var(--h3);
+  color: var(--coloraccent);
+}
+
+h4 {
+  font: var(--h4);
+  color: var(--coloraccent);
+}
+
+.links {
+  font: var(--links);
+}
+
+p {
+  font: var(--p1);
+}
+
+.p2 {
+  font: var(--p2);
+  color: var(--coloraccent)
+}
+
+
+
+body {
+  background-image: url(./Assets/Images/Desktop\ -\ 1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0px;
+  margin: auto;
+  color: var(--colorwhite);
+}
+
+.section {
+  width: 90vw;
+  max-width: 1080px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.logo:hover {
+  cursor: default;
+  color: var(--coloraccent);
+  transition: var(--transition);
+}
+
+a {
+  text-decoration: none;
+  color: var(--coloraccent);
+  font: var(--links)
+}
+
+a:hover {
+  color: var(--colorlinks);
+  transform: var(--transition);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.nav-menu li {
+  list-style: none;
+}
+
+/* Hamburger menu (from a tutorial) */
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: var(--transition);
+  background-color: var(--coloraccent);
+}
+
+/* Hero */
+.column {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero div {
+  flex: 1;
+}
+
+.hero img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+
+.button {
+  font: var(--p3);
+  letter-spacing: 0.2rem;
+  color: var(--colorp2);
+  background-color: var(--coloroffwhite);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--coloroffwhite);
+  padding: 0 30px;
+  height: 45px;
+  border-radius: 10px;
+}
+
+.button:hover {
+  border: 2px solid var(--coloraccent);
+  color: var(--coloraccent);
+  transition: var(--transition)
+}
+
+#primary-links {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+/* About */
+#about {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.about {
+  margin-top: 40px;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-container {
+  padding: 20px 20px 40px 20px;
+  background-color: var(--colorp2);
+  border: 1px solid var(--colorwhite);
+  border-radius: 10px;
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.about-heading h3 {
+  color: var(--colorwhite);
+  margin-bottom: 40px;
+}
+
+/* Projects */
+#projects {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.projects {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.project-image {
+  grid-column: 1;
+  grid-row: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid var(--colorwhite);
+  border-radius: 10px;
+  object-fit: fill;
+}
+
+.project-image img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.project-image2 {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid var(--colorwhite);
+  border-radius: 10px;
+  object-fit: fill;
+}
+
+.project-image2 img {
+  object-fit: cover;
+  min-width: 200px;
+}
+
+.first {
+  grid-row: 1;
+}
+
+.project-text {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  text-align: left;
+  gap: 10px;
+}
+
+.project-text2 {
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  justify-content: center;
+  text-align: right;
+  gap: 10px;
+}
+
+/* Footer */
+
+#contact {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.contact-container {
+  margin: 40px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 5px;
+  gap: 20px;
+  background-color: var(--colorp2);
+  border: 1px solid var(--colorwhite);
+  border-radius: 10px;
+  width: 80%
+}
+
+.contact-container div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.contact-container a {
+  font-size: 1.5rem;
+
+}
+
+.contact-container p:hover {
+  color: var(--coloraccent);
+}
+
+.contact-icon {
+  color: var(--colorwhite);
+}
+
+/* Footer */
+#footer {
+  margin-top: 50px;
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer-nav {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.footer-nav li {
+  list-style: none;
+  margin-bottom: 50px;
+}
+
+.footer-nav li a {
+  font-size: 2rem;
+}
+
+.footer p {
+  font-family: "Sansation Light";
+  margin-bottom: 50px;
+
+}
