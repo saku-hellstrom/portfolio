@@ -123,7 +123,7 @@ a {
 
 a:hover {
   color: var(--colorlinks);
-  transform: var(--transition);
+  transition: var(--transition);
 }
 
 .nav-menu {
@@ -334,6 +334,7 @@ a:hover {
 
 .contact-container p:hover {
   color: var(--coloraccent);
+  transition: var(--transition);
 }
 
 .contact-icon {
